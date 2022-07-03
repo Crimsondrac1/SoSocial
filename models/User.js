@@ -20,12 +20,12 @@ const userSchema = new Schema(
     friends: [{ type: Schema.Types.ObjectId, ref: "User" }],
   },
   {
-  toJSON: {
-    virtuals: true,
-    getters: true
-  },
-  id: false
-}
+    toJSON: {
+      virtuals: true,
+      getters: true,
+    },
+    id: false,
+  }
 );
 const User = model("User", userSchema);
 // creates virtual to retrieve length of users friends
